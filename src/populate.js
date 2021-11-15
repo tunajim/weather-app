@@ -13,13 +13,8 @@ function _populateMainTemp(temp, object) {
 }
 
 async function _populateWeatherIcon(icon, object) {
-  const request = await fetch(
-    `http://openweathermap.org/img/wn/${icon}@2x.png`,
-    { method: "get" },
-    { mode: "cors" }
-  );
-  const data = await request;
-  object.style.backgroundImage = `url(${data.url})`;
+  const request = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  object.style.backgroundImage = `url(${request})`;
 }
 
 function _populateCityName(name, object) {
