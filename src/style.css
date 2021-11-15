@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+#weather-container {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.781);
+  background: linear-gradient(120deg, #361d46, #626888);
+  margin: 1em auto 1em auto;
+  border-radius: 1rem;
+  display: grid;
+  grid-template: repeat(5, 1fr) / 1fr;
+  align-items: center;
+  justify-content: stretch;
+  row-gap: 10px;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+#search-bar {
+  position: relative;
+  grid-area: 1 / 1 / 1 / 1;
+  justify-self: start;
+  border: none;
+  background: none;
+  outline: none;
+  margin: auto;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#search-bar input {
+  border: none;
+  background: none;
+  align-self: center;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+  border: none;
+  background: none;
+  color: white;
+  filter: invert(100%);
+}
+
+#search-icon {
+  width: 1.5rem;
+  margin-right: 1em;
+}
+
+button[type="submit"] {
+}
+
+#main-temperature {
+  grid-area: 2 / 1 / 2 / 1;
+  justify-self: center;
+  margin-left: 1rem;
+  display: flex;
+  align-items: end;
+}
+
+#main-temperature h3 {
+  font-size: 3rem;
+  font-weight: 999;
+  font-family: serif;
+  line-height: 3rem;
+    margin: 0;
+}
+
+#weather-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 30%;
+  background-color: rgba(173, 173, 173, 0.63);
+  background-size: 3.75rem;
+  background-position: center;
+}
+
+#city {
+  grid-area: 3 / 1 / 3 / 1;
+  text-align: center;
+  font-size: 2.4em;
+  font-weight: normal;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+#country {
+  grid-area: 4 / 1 / 4 / 1;
+  text-align: center;
+  font-size: 1.75em;
+  font-weight: lighter;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+#min-max {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#high,
+#low {
+  font-weight: lighter;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#load-wheel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  visibility: hidden;
+}
+
+#load-wheel.active {
+  visibility: visible;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
