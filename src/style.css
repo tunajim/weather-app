@@ -64,7 +64,6 @@ button[type="submit"] {
 #main-temperature {
   grid-area: 2 / 1 / 2 / 1;
   justify-self: center;
-  margin-left: 1rem;
   display: flex;
   align-items: end;
 }
@@ -74,7 +73,6 @@ button[type="submit"] {
   font-weight: 999;
   font-family: serif;
   line-height: 3rem;
-    margin: 0;
 }
 
 #weather-icon {

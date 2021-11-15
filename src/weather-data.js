@@ -13,6 +13,7 @@ async function getWeatherData(city, state) {
   } catch (err) {
     console.log(err);
     _toggleLoader(objects.loader);
+    alert(err);
   }
 }
 
@@ -36,7 +37,7 @@ function _logWeather(data) {
 function _checkForError(data) {
   console.log(data);
   if (data.cod !== 200) {
-    throw new Error("No data");
+    throw new Error("No data matching entry. Please check for typos and accidental spaces");
   } else {
     console.log(data);
     return data;
